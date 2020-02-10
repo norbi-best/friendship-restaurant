@@ -12,14 +12,16 @@ import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
+import Menu from "@material-ui/core/Menu";
+import MenuIcon from "@material-ui/icons/Menu";
 // core components
 import styles from "../../../asset/jss/views/headerStyle.js";
-
+import Fade from "@material-ui/core/Fade";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
     const classes = useStyles();
+     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
     React.useEffect(() => {
         if (props.changeColorOnScroll) {
@@ -31,8 +33,9 @@ export default function Header(props) {
             }
         };
     });
-    const handleDrawerToggle = () => {
+    const handleDrawerToggle = (event) => {
         setMobileOpen(!mobileOpen);
+        setAnchorEl(event.currentTarget);
     };
     const headerColorChange = () => {
         const { color, changeColorOnScroll } = props;
@@ -83,15 +86,16 @@ export default function Header(props) {
                         aria-label="open drawer"
                         onClick={handleDrawerToggle}
                     >
-                        <Menu />
+                       <MenuIcon />
                     </IconButton>
                 </Hidden>
             </Toolbar>
             <Hidden mdUp implementation="js">
-                <Drawer
-                    variant="temporary"
-                    anchor="top"
+                <Menu
+                    anchorEl={anchorEl}
+                    keepMounted
                     open={mobileOpen}
+                    TransitionComponent={Fade}
                     classes={{
                         paper: classes.drawerPaper
                     }}
@@ -101,7 +105,7 @@ export default function Header(props) {
                         {leftLinks}
                         {rightLinks}
                     </div>
-                </Drawer>
+                </Menu>
             </Hidden>
         </AppBar>
     );
