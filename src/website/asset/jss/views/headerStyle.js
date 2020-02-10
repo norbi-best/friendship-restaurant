@@ -141,7 +141,7 @@ const headerStyle = {
         position: "fixed",
         display: "block",
         top: "0",
-        height: "50vh",
+        height: "70vh",
         right: "0",
         left: "auto",
         visibility: "visible",
