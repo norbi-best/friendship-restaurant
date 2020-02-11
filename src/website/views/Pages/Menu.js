@@ -26,34 +26,10 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import image3 from "../../asset/img/83069877_2830289860324609_1160202023929380864_n-2.jpg";
-import image4 from "../../asset/img/83179042_2818324191521176_4915364829302095872_n.jpg";
-import image5 from "../../asset/img/76638543_2686654221354841_8586960443111636992_o.jpg";
-import image6 from "../../asset/img/77231400_2693326137354316_6855829662065491968_o.jpg";
+
 
 import styles from "../../asset/jss/views/components.js";
-const tileData = [
-    {
-        img: image3,
 
-        cols: 2,
-        featured: true,
-    },
-    {
-        img: image4,
-
-    },
-    {
-        img: image5,
-
-    },
-    {
-        img: image6,
-
-        featured: true,
-    },
-
-];
 const useStyles = makeStyles(theme => ({
     ...styles,
     root: {
@@ -76,15 +52,31 @@ function Menu() {
     const classes = useStyles();
     return(
         <div className={classes.section}>
-
-
-
-                <GridList cellHeight={300} className={classes.gridList} cols={5}>
-                    {tileData.map(tile => (
-                        <GridListTile key={tile.img} cols={tile.cols || 2}>
-                            <img src={tile.img} alt={tile.title} />
+                <GridList cellHeight={300} className={classes.gridList} cols={5}>  
+                        <GridListTile key={tile.img} cols={4 || 2}>
+                          <div className="parent" onClick="">
+                            <div className="child bg-one">
+                                <label>Dish name</label>
+                            </div>
+                        </div>
+                              <div className="parent" onClick="">
+                            <div className="child bg-two">
+                                <label>Dish name</label>
+                            </div>
+                        </div>
+                         <div className="parent" onClick="">
+                            <div className="child bg-three">
+                                <label>Dish name</label>
+                            </div>
+                        </div>
+                       <div className="parent" onClick="">
+                            <div className="child bg-four">
+                                <label>Dish name</label>
+                            </div>
+                        </div>
+        
                         </GridListTile>
-                    ))}
+                   
                 </GridList></div>
 
 
