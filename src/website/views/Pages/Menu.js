@@ -27,7 +27,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
-
+import '../../asset/style.css';
 import styles from "../../asset/jss/views/components.js";
 
 const useStyles = makeStyles(theme => ({
