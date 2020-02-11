@@ -52,23 +52,27 @@ function Menu() {
     const classes = useStyles();
     return(
         <div className={classes.section}>
-                <GridList cellHeight={300} className={classes.gridList} cols={5}>  
-                        <GridListTile  cols={4 || 2}>
+                <GridList cellHeight={200} className={classes.gridList} cols={5}>  
+                        <GridListTile  cols={1 || 4}>
                           <div className="parent" onClick="">
                             <div className="child bg-one">
                                 <label>Dish name</label>
                             </div>
                         </div>
+        </GridListTile>
+        <GridListTile  cols={2 || 4}>
                               <div className="parent" onClick="">
                             <div className="child bg-two">
                                 <label>Dish name</label>
                             </div>
-                        </div>
+                        </div></GridListTile>
+        <GridListTile  cols={3 || 4}>
                          <div className="parent" onClick="">
                             <div className="child bg-three">
                                 <label>Dish name</label>
                             </div>
-                        </div>
+                        </div></GridListTile>
+        <GridListTile  cols={4 || 4}>
                        <div className="parent" onClick="">
                             <div className="child bg-four">
                                 <label>Dish name</label>
