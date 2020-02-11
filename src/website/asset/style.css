@@ -86,7 +86,6 @@ a {
 }
 
 .child:before {
-    content: "";
     display: none;
     height: 100%;
     width: 100%;
