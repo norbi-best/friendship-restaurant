@@ -13,6 +13,7 @@ import {withStyles} from "@material-ui/core";
 import CustomTabs from "../Components/Tabs/CustomTabs";
 import {Build, Chat, Dashboard, Face, Palette, Schedule} from "@material-ui/icons";
 import NavPills from "../Components/NavPills/NavPills";
+import image1 from "../../asset/img/fancy-french-menu-template-visme.jpg"
 const images = [
     {
 
@@ -42,8 +43,8 @@ export default function About() {
         <div className={classes.section}>
             <div className={classes.container}>
                 <div id="nav-tabs">
-                    <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+                    <GridContainer >
+                        <GridItem xs={12}   >
                             <NavPills
                                 alignCenter
 color={"primary"}
@@ -53,9 +54,10 @@ color={"primary"}
                                         tabIcon: Dashboard,
                                         tabContent: (
                                             <GridContainer justify="center">
-                                                <GridItem xs={12} sm={12} md={4}>
-                                                    <Paper style={{height:"65vh", width:"100%"}}>
+                                                <GridItem xs={12} sm={12} >
+                                                    <Paper style={{height:"85vh", width:"100%"}}>
                                                     <ButtonBase>Menu</ButtonBase>
+                                                        <img src={image1}/>
                                                     </Paper>
                                                 </GridItem>
                                             </GridContainer>
@@ -67,7 +69,7 @@ color={"primary"}
                                         tabContent: (
                                             <GridContainer justify="center">
                                                 <GridItem xs={12} sm={12} md={4}>
-                                                    <Paper style={{height:"65vh",width:"100%"}}>
+                                                    <Paper style={{height:"85vh",width:"100%"}}>
                                                     <ButtonBase>Menu Special</ButtonBase>
                                                     </Paper>
                                                 </GridItem>
