@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
     },
     gridList: {
-        width: "",
+        width: "100%",
         height: "80vh",
         alignItems: "center",
     },
@@ -52,27 +52,27 @@ function Menu() {
     const classes = useStyles();
     return(
         <div className={classes.section}>
-                <GridList cellHeight={200} className={classes.gridList} cols={5}>  
-                        <GridListTile  cols={1 || 4}>
+                <GridList cellHeight={200} className={classes.gridList} cols={3}>  
+                        <GridListTile  cols={1 || 1}>
                           <div className="parent" onClick="">
                             <div className="child bg-one">
                                 <label>Dish name</label>
                             </div>
                         </div>
         </GridListTile>
-        <GridListTile  cols={2 || 4}>
+        <GridListTile  cols={2 || 1}>
                               <div className="parent" onClick="">
                             <div className="child bg-two">
                                 <label>Dish name</label>
                             </div>
                         </div></GridListTile>
-        <GridListTile  cols={3 || 4}>
+        <GridListTile  cols={3 || 1}>
                          <div className="parent" onClick="">
                             <div className="child bg-three">
                                 <label>Dish name</label>
                             </div>
                         </div></GridListTile>
-        <GridListTile  cols={4 || 4}>
+        <GridListTile  cols={4 || 1}>
                        <div className="parent" onClick="">
                             <div className="child bg-four">
                                 <label>Dish name</label>
