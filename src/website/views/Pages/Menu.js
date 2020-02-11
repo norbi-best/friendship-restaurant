@@ -53,7 +53,7 @@ function Menu() {
     return(
         <div className={classes.section}>
                 <GridList cellHeight={300} className={classes.gridList} cols={5}>  
-                        <GridListTile key={tile.img} cols={4 || 2}>
+                        <GridListTile  cols={4 || 2}>
                           <div className="parent" onClick="">
                             <div className="child bg-one">
                                 <label>Dish name</label>
