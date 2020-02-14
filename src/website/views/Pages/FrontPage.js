@@ -24,12 +24,12 @@ function FrontPage(props) {
         const { ...rest } = props;
         return (
             <div style={{width:"100%"}}>
-                <Header  brand={<img scr={image}/>} fixed color="transparent"
+                <Header fixed color="transparent"
                         changeColorOnScroll={{
                         height: 200,
                         color: "white"
                     }}
-                    {...rest}/>
+                    {...rest}><img scr={image}/></Header>
                 <Parallax image={require('../../asset/img/1291593_633276010026016_525588904_o.jpg')}>
 
                     <div className={classes.container}>
