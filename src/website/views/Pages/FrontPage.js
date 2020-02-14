@@ -14,7 +14,9 @@ import Brand from "../Components/Header/Brand";
 import About from "./About";
 import StartPage from "./StartPage";
 import ContactForm from "./ContactForm";
+import image from '../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'
 const useStyles = makeStyles(styles);
+
 
 
 function FrontPage(props) {
@@ -22,7 +24,8 @@ function FrontPage(props) {
         const { ...rest } = props;
         return (
             <div style={{width:"100%"}}>
-                <Header  brand={'../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'}  rightLinks={<HeaderLinks />} fixed color="transparent"
+                <Header  brand={<span className={classes.imageSrc} style={{backgroundImage: `url(${image})`,}}
+          />}  rightLinks={<HeaderLinks />} fixed color="transparent"
                         changeColorOnScroll={{
                         height: 200,
                         color: "white"
