@@ -25,6 +25,7 @@ function FrontPage(props) {
         return (
             <div style={{width:"100%"}}>
                 <Header
+                brand={<Brand/>}
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
