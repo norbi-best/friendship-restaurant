@@ -22,7 +22,7 @@ function FrontPage(props) {
         const { ...rest } = props;
         return (
             <div style={{width:"100%"}}>
-                <Header  brand={'../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'} leftLinks={} rightLinks={<HeaderLinks />} fixed color="transparent"
+                <Header  brand={'../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'}  rightLinks={<HeaderLinks />} fixed color="transparent"
                         changeColorOnScroll={{
                         height: 200,
                         color: "white"
