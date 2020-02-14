@@ -77,7 +77,7 @@ export default function Header(props) {
     return (
         <AppBar className={appBarClasses}>
             <Toolbar className={classes.container}>
-        <img style={{width:"100px", heigth:"150px"}} scr={image}/>
+        <img style={{width:"100px", height:"150px"}} scr={image}/>
                
                 <div className={classes.flex}>
                     {leftLinks !== undefined ? (
