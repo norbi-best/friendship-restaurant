@@ -71,13 +71,11 @@ export default function Header(props) {
         [classes.absolute]: absolute,
         [classes.fixed]: fixed
     });
-    const brandComponent = <ButtonBase className={classes.title} style={{
-            backendImage:{image}
-          }}/> ;
+   
     return (
         <AppBar className={appBarClasses}>
             <Toolbar className={classes.container}>
-        <img style={{width:"100px", height:"150px"}} scr={require('../../../asset/img/fancy-french-menu-template-visme.jpg')}/>
+       <Button className={classes.title} /> 
                
                 <div className={classes.flex}>
                     {leftLinks !== undefined ? (
