@@ -75,8 +75,7 @@ export default function Header(props) {
     return (
         <AppBar className={appBarClasses}>
             <Toolbar className={classes.container}>
-       <Button className={classes.title} /> 
-               
+       {leftLinks !== undefined ? brandComponent : null}
                 <div className={classes.flex}>
                     {leftLinks !== undefined ? (
                         <Hidden smDown implementation="css">
