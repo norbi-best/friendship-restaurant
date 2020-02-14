@@ -1,8 +1,8 @@
 const parallaxStyle = {
     parallax: {
-        height: "100vh",
+        height: "85vh",
         maxHeight: "1000px",
-        width: "100%",
+       width:"90%",
         overflow: "hidden",
         position: "relative",
         backgroundPosition: "center center",
@@ -21,7 +21,7 @@ const parallaxStyle = {
         "&:after,&:before": {
             position: "absolute",
             zIndex: "1",
-            width: "100%",
+          
             height: "100%",
 
             left: "0",
