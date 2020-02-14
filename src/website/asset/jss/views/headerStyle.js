@@ -11,7 +11,7 @@ import {
     boxShadow,
     drawerWidth
 } from "./material-kit.js";
-
+import image from "../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg"
 const headerStyle = {
     appBar: {
         display: "flex",
@@ -62,6 +62,7 @@ const headerStyle = {
         color: "inherit",
         padding: "8px 16px",
         letterSpacing: "unset",
+        backgroundImage:image,
         "&:hover,&:focus": {
             color: "inherit",
             background: "transparent"
