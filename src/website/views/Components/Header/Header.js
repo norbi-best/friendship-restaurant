@@ -19,6 +19,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import styles from "../../../asset/jss/views/headerStyle.js";
 import Fade from "@material-ui/core/Fade";
 const useStyles = makeStyles(styles);
+import image from '../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'
 const images = [
     {
         url: '../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg',
@@ -71,12 +72,7 @@ export default function Header(props) {
     });
     const brandComponent = <ButtonBase className={classes.title} style={{
             width: images.width,
-          }}> <span
-            className={classes.imageSrc}
-            style={{
-              backgroundImage: `url(${images.url})`,
-            }}
-          /></ButtonBase>;
+          }}> {brand}</ButtonBase>;
     return (
         <AppBar className={appBarClasses}>
             <Toolbar className={classes.container}>
@@ -142,7 +138,7 @@ Header.propTypes = {
     ]),
     rightLinks: PropTypes.node,
     leftLinks: PropTypes.node,
-    brand: PropTypes.string,
+    brand: PropTypes.node,
     fixed: PropTypes.bool,
     absolute: PropTypes.bool,
     // this will cause the sidebar to change the color from
