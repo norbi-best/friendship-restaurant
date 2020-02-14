@@ -77,7 +77,7 @@ export default function Header(props) {
     return (
         <AppBar className={appBarClasses}>
             <Toolbar className={classes.container}>
-        <img style={{width:"100px", height:"150px"}} scr={require('../../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg')}/>
+        <img style={{width:"100px", height:"150px"}} scr={require('../../../asset/img/fancy-french-menu-template-visme.jpg')}/>
                
                 <div className={classes.flex}>
                     {leftLinks !== undefined ? (
