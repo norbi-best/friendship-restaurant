@@ -7,14 +7,13 @@ import Grid from "@material-ui/core/Grid";
 
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+import GridContainer from "../Components/Grid/GridContainer";
 const useStyles = makeStyles(theme => ({
     root: {
-
-        justifyContent: 'space-around',
         overflow: 'hidden',
         display: 'flex',
-        flexWrap: 'wrap',
-        minWidth: 300,
+
+        minWidth: 200,
         width: '100%',
     },
     image: {
@@ -42,7 +41,9 @@ const useStyles = makeStyles(theme => ({
     },
     gridList: {
         width: "100%",
-        height: 450,
+        height: "100%",
+        display: 'flex',
+        justifyItems:"center",
     },
     focusVisible: {},
     imageButton: {
@@ -96,21 +97,26 @@ export default function About() {
 
     return (
         <div className={classes.section}>
+            <div style={ {display: 'flex', minWidth: 100, }}>
+                <Grid container xs={12} >
 
-                <Grid container xs={12} justify="center">
-                    <Grid item xs={7}>
-                    <div className={classes.root}>
+
+                    <Grid item  xs={12}  md={6}>
+
                         <ParallaxBackButtons image={require('../../asset/img/marinavorontsova160800088.jpg')}>
 
-                        <GridList cellHeight={200}  className={classes.gridList}>
+                        <GridList cellHeight={120}  className={classes.gridList}>
+                            <Grid container>
 
+                            <Grid item  >
                      <GridListTile >
                     <ButtonBase
                     focusRipple
                     className={classes.image}
                     focusVisibleClassName={classes.focusVisible}
                     style={{
-                        minWidth: "300px",
+                        width:"100%",
+                        minWidth:"200px"
                     }}
                 >
 
@@ -128,13 +134,16 @@ export default function About() {
           </span>
                 </ButtonBase>
                        </GridListTile>
+                            </Grid>
+                            <Grid item  >
                          <GridListTile >
                              <ButtonBase
                                  focusRipple
                                  className={classes.image}
                                  focusVisibleClassName={classes.focusVisible}
                                  style={{
-                                     minWidth: "300px",
+width:"100%",
+                                     minWidth:"200px"
                                  }}
                              >
 <span
@@ -155,11 +164,14 @@ export default function About() {
           </span>
                              </ButtonBase>
                          </GridListTile>
+                            </Grid>
+                            <Grid item  >
                          <GridListTile >
                              <ButtonBase
                                  focusRipple
                                  style={{
-                                     minWidth: "300px",
+                                     width:"100%",
+                                     minWidth:"200px"
                                  }}
                                  className={classes.image}
                                  focusVisibleClassName={classes.focusVisible}
@@ -179,18 +191,21 @@ export default function About() {
           </span>
                              </ButtonBase>
                          </GridListTile>
+                            </Grid>
 
+                            </Grid>
                    </GridList></ParallaxBackButtons>
-                    </div>
+
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={12} md={6}>
+                        <div>
 <Typography variant={"h6"} style={{color:"#000"}}>The first Michelin Guide was compiled in 1900 by French industrialist Andre Michelin, along with his brother Edouard Michelin. They wanted to create demand for automobiles…and therefore, the tires they manufactured.
 
     At the time, there were plenty of bicycles, but there were only 300 cars in France. Not enough for a viable business selling automobile tires…the brothers had a profit motive.</Typography>
-
+                        </div>
                     </Grid>
                     </Grid>
-
+            </div>
                 </div>
 
 
