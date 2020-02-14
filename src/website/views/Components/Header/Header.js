@@ -18,7 +18,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 // core components
 import styles from "../../../asset/jss/views/headerStyle.js";
 import Fade from "@material-ui/core/Fade";
-import image from '../../../asset/img/75398288_2651122521574678_1167449025327136768_o.jpg'
+import image from '../../../asset/img/bg3.jpg'
 const useStyles = makeStyles(styles);
 
 const images = [
